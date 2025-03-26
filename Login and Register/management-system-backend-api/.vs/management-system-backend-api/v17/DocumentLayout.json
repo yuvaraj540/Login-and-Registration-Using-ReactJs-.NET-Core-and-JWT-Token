@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Yuva\\management-system-backend-api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\models\\auth\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\models\\auth\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\repo\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\repo\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\repo\\interface\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\repo\\interface\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\database\\sqlconnectionplace\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\database\\sqlconnectionplace\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|d:\\yuva\\management-system-backend-api\\management-system-backend-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6011299-4093-4751-A2F5-26698002BEF8}|management-system-backend-api\\management-system-backend-api.csproj|solutionrelative:management-system-backend-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Models\\Auth\\Register.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Models\\Auth\\Register.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Models\\Auth\\Register.cs",
+              "RelativeToolTip": "management-system-backend-api\\Models\\Auth\\Register.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAIAwwCgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T13:36:32.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\appsettings.json",
+              "RelativeDocumentMoniker": "management-system-backend-api\\appsettings.json",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\appsettings.json",
+              "RelativeToolTip": "management-system-backend-api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-25T13:05:20.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SqlConnectionFactory.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Database\\SqlConnectionPlace\\SqlConnectionFactory.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Database\\SqlConnectionPlace\\SqlConnectionFactory.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Database\\SqlConnectionPlace\\SqlConnectionFactory.cs",
+              "RelativeToolTip": "management-system-backend-api\\Database\\SqlConnectionPlace\\SqlConnectionFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T13:02:40.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Repo\\Repository\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Repo\\Repository\\AuthRepository.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Repo\\Repository\\AuthRepository.cs",
+              "RelativeToolTip": "management-system-backend-api\\Repo\\Repository\\AuthRepository.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAuwEEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T12:56:26.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Repo\\Interface\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Repo\\Interface\\IAuthRepository.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Repo\\Interface\\IAuthRepository.cs",
+              "RelativeToolTip": "management-system-backend-api\\Repo\\Interface\\IAuthRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T12:56:08.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Program.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Program.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Program.cs",
+              "RelativeToolTip": "management-system-backend-api\\Program.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAACcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T12:38:25.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "management-system-backend-api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwEkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T05:44:19.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "management-system-backend-api\\Services\\JwtService.cs",
+              "ToolTip": "D:\\Yuva\\management-system-backend-api\\management-system-backend-api\\Services\\JwtService.cs",
+              "RelativeToolTip": "management-system-backend-api\\Services\\JwtService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAiwCwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T11:01:25.409Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
