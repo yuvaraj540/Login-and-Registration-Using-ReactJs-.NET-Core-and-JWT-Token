@@ -1,0 +1,166 @@
+
+.block{
+    height: 100vh;
+    width: 50%;
+    
+}
+
+.leftBlock{
+    float:left;
+    background-color: #0a1627;
+    color: #fff;
+    text-align: center;
+}
+
+.rightBlock{
+    float: right;
+    background-color: white;
+}
+
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center; */
+}
+
+fieldset{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 430px;
+    height: 630px;
+    padding: 10px 20px;
+    box-shadow: 8px 8px 6px;
+}
+
+fieldset > legend{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color: purple ;
+}
+
+.inputfield{
+    width: 380px;
+    height: 30px;
+    border-radius: 10px ;
+    border: 2px solid purple;
+}
+
+.terms{
+    width: 10px;
+    height: 30px;
+    display: inline;
+    margin: 0;
+    float: left;
+    margin:0px 10px;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.checkbox{
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* input[type="checkbox"]:hover{
+    background-color: #a5a5a5;
+}
+
+input[type="checkbox"]:checked{
+    background-color: purple;
+} */
+
+.inputbox{
+    margin: 7px;
+}
+
+h1{
+    margin: 0px 0px;
+}
+
+.text{
+    text-align: center;
+    margin: 0;
+}
+
+.text2{
+    margin: 0;
+
+}
+
+.image{
+    width: 300px;
+    height: 300px;
+    margin: 0px 100px;
+
+}
+
+.link1{
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link2{
+    color: purple;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.registerButton{
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border: 3px solid purple;
+    font-weight: bold;
+    cursor: pointer;
+    width: 380px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerButton:hover{
+    background-color: violet;
+    color: white;
+    border: 3px solid violet;
+}
+
+/* .buttonbox{
+    text-align: center;
+    margin-top: 3px;
+} */
+
+.hr1{
+    border: 1px solid grey;
+}
+
+.centerimg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .signinlogo{
+    margin: 5px;
+} */
+
+a > img{
+    width: 42px;
+    height: 42px;
+    margin:2px 10px;
+    border: 2px solid rgb(195, 192, 192);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based Access Control in .NET</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Role-Based Access Control in .NET</h1>
+
+<h2>1. UserIdentity Class</h2>
+<p>This class represents the identity of a user in the application.</p>
+
+<h3>Fields:</h3>
+<ul>
+    <li><strong>System:</strong> A static instance representing a system user.</li>
+</ul>
+
+<h3>Properties:</h3>
+<ul>
+    <li><strong>IsAuthenticated:</strong> Indicates if the user is authenticated.</li>
+    <li><strong>Id:</strong> The unique identifier for the user.</li>
+    <li><strong>UserName:</strong> The user's name.</li>
+    <li><strong>EmailAddress:</strong> The user's email.</li>
+    <li><strong>RoleNames:</strong> An array of roles assigned to the user.</li>
+</ul>
+
+<h3>Methods:</h3>
+<ul>
+    <li><strong>FromPrinciple(ClaimsPrincipal user):</strong> Creates a UserIdentity instance from a ClaimsPrincipal, extracting the user's ID and roles from the claims.</li>
+</ul>
+
+<h2>2. SupportedAuthenticationSchemes Class</h2>
+<p>This class defines the authentication schemes that the application supports.</p>
+
+<h3>Constants:</h3>
+<ul>
+    <li><strong>Bearer:</strong> Indicates that the application supports Bearer token authentication, commonly used in APIs.</li>
+</ul>
+
+<h2>3. Policy Class</h2>
+<p>This class encapsulates authorization policies.</p>
+
+<h3>Constants:</h3>
+<ul>
+    <li><strong>RequiresUser:</strong> A policy for standard users.</li>
+    <li><strong>RequiresAdministrator:</strong> A policy for administrators.</li>
+</ul>
+
+<h3>Constructors:</h3>
+<ul>
+    <li>The static constructor initializes all policies:
+        <ul>
+            <li><strong>RequiresUser:</strong> Requires the user to be authenticated and have the "User" role.</li>
+            <li><strong>RequiresAdministrator:</strong> Requires the user to be authenticated and have an "Admin" claim.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Properties:</h3>
+<ul>
+    <li><strong>AllPolicies:</strong> A list of all defined policies.</li>
+    <li><strong>Name:</strong> The name of the policy.</li>
+    <li><strong>Configure:</strong> A method to configure the policy.</li>
+</ul>
+
+<h2>4. CoreRoleNames Class</h2>
+<p>This class defines the role names used in the application.</p>
+
+<h3>Constants:</h3>
+<ul>
+    <li><strong>Admin:</strong> Represents the administrator role.</li>
+    <li><strong>User:</strong> Represents the standard user role.</li>
+    <li><strong>System:</strong> Represents a special system role.</li>
+</ul>
+
+<h2>How to Use This Code</h2>
+
+<h3>User Authentication:</h3>
+<p>When a user logs in, their identity (including roles and claims) is captured and can be accessed via the ClaimsPrincipal object.</p>
+
+<h3>Authorization Policies:</h3>
+<p>You can use the defined policies (RequiresUser and RequiresAdministrator) to secure your controllers or actions. For example:</p>
+
+<pre><code>
+[Authorize(Policy = Policy.RequiresAdministrator)]
+public class AdminController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult GetAdminData()
+    {
+        return Ok("This is admin data.");
+    }
+}
+</code></pre>
+
+<h3>Claim-Based Access:</h3>
+<p>The policies leverage claims (like roles) to determine what access a user has.</p>
+
+<h2>Simplified Flow</h2>
+<ol>
+    <li>User logs in → A ClaimsPrincipal is created.</li>
+    <li>Claims are extracted → The UserIdentity.FromPrinciple method is called to create a UserIdentity object.</li>
+    <li>Access is checked → The defined policies are used to enforce role-based access control in your API controllers.</li>
+</ol>
+
+<h2>Conclusion</h2>
+<p>This setup provides a robust way to manage user identities and access control in a .NET application. If you have specific parts you want more clarification on or if you need help implementing something, feel free to ask!</p>
+
+</body>
+</html>

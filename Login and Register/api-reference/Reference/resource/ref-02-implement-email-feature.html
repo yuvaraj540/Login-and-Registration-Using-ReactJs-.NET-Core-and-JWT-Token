@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email OTP Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1 { color: #333; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Email OTP Example</h1>
+    
+    <h2>Step 1: Create the .cshtml Template</h2>
+    <pre><code>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your OTP Code</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your OTP Code</h1>
+        <p>Your OTP is: <strong>{{OTP}}</strong></p>
+        <p>Thank you for using our service!</p>
+    </div>
+</body>
+</html>
+    </code></pre>
+
+    <h2>Step 2: .NET Code to Send Email</h2>
+    <pre><code>
+using System;
+using System.IO;
+using MailKit.Net.Smtp;
+using MimeKit;
+
+public class EmailService
+{
+    public string GetHtmlTemplate(string filePath)
+    {
+        return File.ReadAllText(filePath);
+    }
+
+    public string ReplaceOtpInTemplate(string template, string otp)
+    {
+        return template.Replace("{{OTP}}", otp);
+    }
+
+    public void SendEmail(string htmlBody, string recipientEmail)
+    {
+        var message = new MimeMessage();
+        message.From.Add(new MailboxAddress("Your Name", "your-email@example.com"));
+        message.To.Add(new MailboxAddress("Recipient Name", recipientEmail));
+        message.Subject = "Your OTP Code";
+        
+        var bodyBuilder = new BodyBuilder
+        {
+            HtmlBody = htmlBody
+        };
+        
+        message.Body = bodyBuilder.ToMessageBody();
+        
+        using (var client = new SmtpClient())
+        {
+            client.Connect("smtp.example.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            client.Authenticate("your-email@example.com", "your-email-password");
+            client.Send(message);
+            client.Disconnect(true);
+        }
+    }
+
+    public void SendOtpEmail(string otp, string recipientEmail)
+    {
+        string templatePath = "path/to/your/EmailTemplate.cshtml"; // Update with your actual path
+        string htmlTemplate = GetHtmlTemplate(templatePath);
+        string htmlBody = ReplaceOtpInTemplate(htmlTemplate, otp);
+        
+        SendEmail(htmlBody, recipientEmail);
+    }
+}
+
+// Example usage
+class Program
+{
+    static void Main()
+    {
+        var emailService = new EmailService();
+        string otp = "123456"; // Your OTP value
+        string recipientEmail = "recipient@example.com"; // Recipient's email address
+
+        emailService.SendOtpEmail(otp, recipientEmail);
+    }
+}
+    </code></pre>
+
+    <h2>Important Configuration</h2>
+    <ul>
+        <li><strong>SMTP Configuration:</strong> Update the SMTP settings in SendEmail method with your email server details.</li>
+        <li><strong>File Path:</strong> Ensure the templatePath variable in SendOtpEmail points to the correct location of your EmailTemplate.cshtml.</li>
+        <li><strong>Error Handling:</strong> Consider adding error handling for production code to manage exceptions during file reading or email sending.</li>
+    </ul>
+
+    <h2>Using Embedded Resources</h2>
+    <h3>Step 1: Embed the .cshtml Template</h3>
+    <p>Create a new file named EmailTemplate.cshtml in your project and set the Build Action to Embedded Resource.</p>
+    
+    <h3>Step 2: Access the Embedded Resource in Code</h3>
+    <pre><code>
+using System;
+using System.IO;
+using System.Reflection;
+using MailKit.Net.Smtp;
+using MimeKit;
+
+public class EmailService
+{
+    public string GetHtmlTemplate()
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        var resourceName = "YourNamespace.EmailTemplate.cshtml"; // Update with your actual namespace and file name
+        
+        using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+        using (StreamReader reader = new StreamReader(stream))
+        {
+            return reader.ReadToEnd();
+        }
+    }
+
+    public string ReplaceOtpInTemplate(string template, string otp)
+    {
+        return template.Replace("{{OTP}}", otp);
+    }
+
+    public void SendEmail(string htmlBody, string recipientEmail)
+    {
+        var message = new MimeMessage();
+        message.From.Add(new MailboxAddress("Your Name", "your-email@example.com"));
+        message.To.Add(new MailboxAddress("Recipient Name", recipientEmail));
+        message.Subject = "Your OTP Code";
+        
+        var bodyBuilder = new BodyBuilder
+        {
+            HtmlBody = htmlBody
+        };
+        
+        message.Body = bodyBuilder.ToMessageBody();
+        
+        using (var client = new SmtpClient())
+        {
+            client.Connect("smtp.example.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            client.Authenticate("your-email@example.com", "your-email-password");
+            client.Send(message);
+            client.Disconnect(true);
+        }
+    }
+
+    public void SendOtpEmail(string otp, string recipientEmail)
+    {
+        string htmlTemplate = GetHtmlTemplate();
+        string htmlBody = ReplaceOtpInTemplate(htmlTemplate, otp);
+        
+        SendEmail(htmlBody, recipientEmail);
+    }
+}
+
+// Example usage
+class Program
+{
+    static void Main()
+    {
+        var emailService = new EmailService();
+        string otp = "123456"; // Your OTP value
+        string recipientEmail = "recipient@example.com"; // Recipient's email address
+
+        emailService.SendOtpEmail(otp, recipientEmail);
+    }
+}
+    </code></pre>
+
+    <h3>Important Notes</h3>
+    <ul>
+        <li><strong>Namespace:</strong> Replace YourNamespace in resourceName with the actual namespace of your project.</li>
+        <li><strong>SMTP Configuration:</strong> Update the SMTP settings with your email server details.</li>
+        <li><strong>Error Handling:</strong> Consider adding error handling for robustness.</li>
+    </ul>
+
+    <p>This setup will read your HTML email template from the embedded resource, replace the OTP, and send the email accordingly.</p>
+</body>
+</html>

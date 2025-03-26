@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WasJYX153qnS9v6kxDeVCxk6lHIcMw5WzrT7i9N8CYg=",
+  "Source": "management-system-backend-api",
+  "BasePath": "_content/management-system-backend-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
