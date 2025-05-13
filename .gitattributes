@@ -1,0 +1,13 @@
+# Force GitHub to prioritize C# as the primary language
+* linguist-detectable=true
+*.cs linguist-language=C#
+*.csproj linguist-language=C#
+*.sln linguist-language=C#
+
+# Treat JavaScript and other languages as secondary
+*.js linguist-detectable=false
+*.jsx linguist-detectable=false
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.json linguist-detectable=false
+*.md linguist-documentation
