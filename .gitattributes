@@ -1,0 +1,14 @@
+# Specify C# language for C# files
+*.cs linguist-language=C#
+*.csproj linguist-language=C#
+*.sln linguist-language=C#
+
+# Specify JavaScript language for JS files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Ignore common non-source code files
+*.md linguist-documentation
+*.json linguist-vendored
+*.lock linguist-vendored
+*.yml linguist-vendored
